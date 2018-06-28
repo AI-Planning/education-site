@@ -1,0 +1,4 @@
+AddType text/html .cgi
+
+AddHandler php52-cgi .html
+Redirect 301 ^/repo(\/?)$ http://education.planning.domains/repo.html
