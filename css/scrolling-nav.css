@@ -185,6 +185,10 @@ section pre.prettyprint {
     background-color: #563a3a;
 }
 
+.education-table td {
+    padding:5px;
+}
+
 .description-section, .course-material-section, .project-ideas-section, .online-resources-section, .footer-section {
     padding-top: 70px;
     padding-bottom: 70px;
