@@ -176,9 +176,8 @@
                                     Intelligence (FAI) Group</a></td>
                             <td>Misc AI and Planning Courses</td>
                             <td><a href="http://fai.cs.uni-saarland.de/teaching/">Lecture Slides</a></td>
-                            <td><a href="http://education.planning.domains/lecturer_area/fai-planning.zip">Planning
-                                    Source</a><br /><a
-                                    href="http://education.planning.domains/lecturer_area/fai-ai.zip">AI Source</a></td>
+                            <td><a href="#" onclick="lecturer_area('fai-planning.zip')">Planning
+                                    Source</a><br /><a href="#" onclick="lecturer_area('fai-ai.zip')">AI Source</a></td>
                         </tr>
                     </table>
                     <h2>Example Assignments</h2>
@@ -208,7 +207,7 @@
                             <td>Michael Cashmore</td>
                             <td>This training lab is an introduction to modelling planning problems using the Planning
                                 Domain Definition Language (PDDL).</td>
-                            <td><a href="http://education.planning.domains/lecturer_area/icaps20-ss-lab1.zip">Lab
+                            <td><a href="#" onclick="lecturer_area('icaps20-ss-lab1.zip')">Lab
                                     Details</a></td>
                         </tr>
                         <tr>
@@ -346,6 +345,18 @@
                 $('#api-warning').html(msg);
             }
         });
+    </script>
+
+    <script type="text/javascript">
+        function lecturer_area(fn) {
+            // request password from user
+            var password = prompt("Please enter the password:", "");
+            if (password == null || password == "") {
+                alert("You must enter a password to access the demos.");
+            }
+            // go to the lecturur_area/<password> page
+            window.location.href = "/lectur_area/" + password + "/" + fn;
+        }
     </script>
 
     <script>
